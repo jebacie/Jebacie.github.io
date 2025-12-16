@@ -8,15 +8,20 @@
 html, body {
     margin: 0;
     padding: 0;
-    background-color: brown;
+    height: 100%;
+    background: linear-gradient(180deg, #ff0000, #800000);
     color: white;
     text-align: center;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1 {
-    margin: 20px 0;
-    font-size: 48px;
+    margin: 40px 0 20px;
+    font-size: 72px; /* większy nagłówek */
+    font-weight: bold;
 }
 
 img {
@@ -24,6 +29,24 @@ img {
     margin: 0 auto;
     max-width: 95%;
     height: auto;
+    flex-grow: 1;
+}
+
+.footer-text {
+    font-size: 5vw; /* responsywne rozmiary */
+    font-weight: 900;
+    letter-spacing: 0.5em; /* mega rozszerzony */
+    text-transform: uppercase;
+    margin: 20px 0;
+    user-select: none;
+}
+
+/* Dla bardzo małych ekranów minimalny rozmiar czcionki */
+@media (max-width: 400px) {
+    .footer-text {
+        font-size: 18px;
+        letter-spacing: 0.3em;
+    }
 }
 </style>
 </head>
@@ -32,7 +55,9 @@ img {
 
 <h1>Jebać Cię</h1>
 
-<img src="./zdjecie.jpg">
+<img src="./zdjecie.jpg" alt="Zdjęcie">
+
+<div class="footer-text">SEX</div>
 
 </body>
 </html>
