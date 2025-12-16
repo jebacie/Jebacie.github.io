@@ -29,22 +29,23 @@ img {
     margin: 0 auto;
     max-width: 95%;
     height: auto;
-    flex-grow: 1;
+    /* Usunięte flex-grow, żeby zdjęcie nie rozciągało się */
 }
 
 .footer-text {
-    font-size: 5vw; /* responsywne rozmiary */
+    font-size: 8vw; /* większy, responsywny rozmiar */
     font-weight: 900;
     letter-spacing: 0.5em; /* mega rozszerzony */
     text-transform: uppercase;
     margin: 20px 0;
     user-select: none;
+    line-height: 1;
 }
 
-/* Dla bardzo małych ekranów minimalny rozmiar czcionki */
+/* Minimalny rozmiar dla bardzo małych ekranów */
 @media (max-width: 400px) {
     .footer-text {
-        font-size: 18px;
+        font-size: 24px;
         letter-spacing: 0.3em;
     }
 }
